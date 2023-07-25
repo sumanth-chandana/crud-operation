@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="crud.css">
+</head>
+<body>
+    <h1>CRUD OPERATIONS</h1>
+    <div class="main">
+        <div class="display">
+            <button class="btn" type="button" onclick="tab_gen()">Display</button>
+        </div>
+        <div class="create-form">
+            <button class="btn" type="button" onclick="visible1()">Create</button>
+            <form name = "addForm" id="add-form" onsubmit = "return Create()">
+                <h3>Create the data</h3>
+                <input name = "id" type="text" placeholder="Id">
+                <input name = "name" type="text" placeholder="Name">
+                <input name = "age" type="text" placeholder="Age">
+                <input name="marks" type="text" placeholder="Marks">
+                <button class="btn btn1" type="button" onclick="Create()">Save</button>
+            </form>
+        </div>
+        <div class="delete-form">
+            <button class="btn" type="button" onclick="visible2()">Delete</button>
+            <form id="del-form" name = "delForm" onsubmit="return Delete()">
+                <h3>Delete the data</h3>
+                <input type="text" placeholder="Id" name="id">
+                <button class="btn btn1" type="button" onclick="Delete()">Remove</button>
+            </form>
+        </div>
+        <div class="update-form">
+            <button class="btn" onclick="visible()" type="button">Update</button>
+            <form  id="update-form" name="updateForm" onsubmit="return Update()">
+            <h3>Update the data</h3>
+            <input type="text" name="id" placeholder="Id">
+            <input type="text" name="name" placeholder="Name">
+            <input type="text" name="age" placeholder="Age">
+            <input type="text" name="marks" placeholder="Marks">
+            <button class="btn btn1" type="button" onclick="Update()">Change</button>
+        </form>
+        </div>
+    </div>
+<div class="content">
+    <p id="tab"></p>
+</div>
+    <script src="crud.js"></script>
+</body>
+</html>
