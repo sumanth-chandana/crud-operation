@@ -22,6 +22,10 @@ h1{
     cursor: pointer;
     padding: 15px 25px;
     margin: 20px;
+    animation: btns 0.5s ease-in-out;
+}
+.btn-1{
+    animation: btns1 0.5s ease-in-out;
 }
 .btn:hover{
     background-color: white;
@@ -32,6 +36,18 @@ h1{
 }
 .btn1:hover{
     background-color: gray;
+}
+@keyframes btns{
+    from{
+        opacity: 0.5;
+        transform: translateY(-100%);
+    }
+}
+@keyframes btns1{
+    from{
+        opacity: 0.5s;
+        transform: translateY(200%);
+    }
 }
 form{
     display: none;
